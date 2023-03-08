@@ -1,4 +1,4 @@
-import { HeartIcon, HeartFillIcon } from '@primer/octicons-react';
+import { BookmarkIcon, BookmarkFillIcon } from '@primer/octicons-react';
 import { IconButton } from '@primer/react';
 import { useState } from 'react';
 
@@ -10,5 +10,7 @@ export default function FavoriteButton({ content }) {
     setIsFavorite(!isFavorite);
   }
 
-  return <IconButton variant="invisible" icon={isFavorite ? HeartFillIcon : HeartIcon} onClick={toggleFavorite} />;
+  return (
+    <IconButton variant="invisible" icon={isFavorite ? BookmarkFillIcon : BookmarkIcon} onClick={toggleFavorite} />
+  );
 }

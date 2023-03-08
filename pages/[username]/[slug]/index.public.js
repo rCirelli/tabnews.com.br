@@ -59,7 +59,6 @@ export default function Post({
             width: '100%',
             display: 'flex',
           }}>
-          <FavoriteButton content={contentFound} />
           <Box
             sx={{
               pr: [0, null, null, 2],
@@ -68,6 +67,7 @@ export default function Post({
               justifyContent: 'center',
             }}>
             <TabCoinButtons content={contentFound} />
+            <FavoriteButton content={contentFound} />
             <Box
               sx={{
                 borderWidth: 0,
