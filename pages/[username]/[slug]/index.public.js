@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
-import { Link, DefaultLayout, Content, TabCoinButtons, Confetti } from 'pages/interface/index.js';
+import { Link, DefaultLayout, Content, TabCoinButtons, Confetti, FavoriteButton } from 'pages/interface/index.js';
 import user from 'models/user.js';
 import content from 'models/content.js';
 import validator from 'models/validator.js';
@@ -59,6 +59,7 @@ export default function Post({
             width: '100%',
             display: 'flex',
           }}>
+          <FavoriteButton content={contentFound} />
           <Box
             sx={{
               pr: [0, null, null, 2],
@@ -104,6 +105,10 @@ export default function Post({
       </DefaultLayout>
     </>
   );
+}
+
+function handleAddToFavorites() {
+  console.log('added to favorites');
 }
 
 function InReplyToLinks({ content, parentContent, rootContent }) {
